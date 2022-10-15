@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - And when I can't fall asleep, I play what I call the alphabet game
- *
+i *
  * Return: Always 0 (success)
  */
 
@@ -11,10 +11,11 @@ int main(void)
 
 	c = 'a';
 	while
-		     (c <= 'z') {
-			       putchar(c);
-			       c++,
-			}
+		(c <= 'z') {
+			putchar(c);
+			c++;
+		}
 	putchar('\n');
 	return (0);
 }
+
