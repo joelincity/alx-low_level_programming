@@ -1,7 +1,8 @@
-#include <studio.h>
+#include <stdio.h>
 /**
- *  main - print a line of code using put
- *  Return: 0
+ * main - a line to print in c
+ *
+ * Return: 0
  */
 int main(void)
 {
