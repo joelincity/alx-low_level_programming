@@ -1,25 +1,34 @@
 #include <stdio.h>
+
 /**
- * main - print fizzbuzz
- *
- * Return: Always 0
+ * main - prints nultplies of 3 or 5
+ * Description: multiples between 0 and 100
+ * Return: Always(0)
  */
 
 int main(void)
 {
-	int n;
+	int i;
 
-	printf("1");
-	for (n = 2; n <= 100; n++)
+	for (i = 1; i <= 99; i++)
 	{
-		printf(" ");
-		if (n % 3 == 0)
-			printf("Fizz");
-		if (n % 5 == 0)
-			printf("Buzz");
-		if (n % 3 != 0 && n % 5 != 0)
-			printf("%d", n);
+		if (i % 15 == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%i ", i);
+		}
 	}
-	printf("'\n");
+	printf("Buzz\n");
 	return (0);
 }
