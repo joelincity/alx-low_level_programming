@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_array - print array
+ * _strcpy - copy the string pointed to scr
  * @dest: character pointer
  * @src: character source
  * Description: copies string pointed to by src
@@ -10,13 +10,14 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
 
-	for (i = 0; src[i]; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = src[i];
-	return (dest);
+			int i;
+
+			for (i = 0; src[i]; i++)
+			{
+				dest[i] = src[i];
+			}
+			dest[i] = src[i];
+			return (dest);
 
 }
