@@ -9,30 +9,21 @@
 
 void puts_half(char *str)
 {
-	int i;
-	int diff;
+	int len = 0;
 
-	while (str[i] != '\0')
+	while (*str != '\0')
 	{
-		i++;
+		len++;
+		str++;
+
 	}
-	if (i % 2 == 1)
+
+	str -= (len / 2);
+	while (*str != '\0')
 	{
-		diff = (i + 1) / 2;
-		while (str[diff] != '\0')
-	{
-		_putchar(str[diff]);
-		diff++;
+		 _putchar(*str);
+		str++;
 	}
-	}
-	else
-	{
-		diff = (i / 2);
-	while (str[diff] != '\0')
-	{
-		_putchar(str[diff]);
-		diff++;
-	}
-	}
+
 	_putchar('\n');
 }
