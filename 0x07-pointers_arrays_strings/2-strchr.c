@@ -2,18 +2,31 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- * Return: Always 0.
+ * _strchr - locates a character
+ *
+ * @s: input string
+ *
+ * @c: input character
+ *
+ * Description: locates a character in a string
+ * Return: returns a ptr to the 1st occurrence of
+ * the char c in str s, else, return NULL
+ *
  */
 
 char *_strchr(char *s, char c)
 {
-	int index;
-
-	for (index = 0; s[index] >= '\0'; index++)
+	while (*s)
 	{
-		if (s[index] == c)
-		return (s + index);
+	if (c == *s)
+	{
+	return (s);
 	}
-	return ('\0');
+		s++;
+	}
+	if (!c)
+	{
+	return (s);
+	}
+	return (NULL);
 }
