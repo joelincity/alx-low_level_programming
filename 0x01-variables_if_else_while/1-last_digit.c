@@ -1,23 +1,35 @@
-#include <time.h>
 #include <stdio.h>
-/**
- * main - to assign a random number
- *
- * Return: Always 0 (success)
- */
+#include <stdlib.h>
+#include <time.h>
 
+
+/**
+ * main - finds the last int in a random number
+ *
+ * Description: The numbers are generated automatically
+ *
+ * Return: Always(0) Success
+ */
 int main(void)
 {
-	int n;
+	int n, last_digit;
 
-	int m;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	last_digit = n % 10;
+	printf("Last digit of %d is %d and is ", n, last_digit);
 
-	m = n % 10;
-	if (m > 5)
-		printf("last digit of %d is %d and is greater than 5\n", n, m);
-	if (m == 0)
-		printf("last digit of %d is %d and is 0\n", n, m);
-	if (m < 6 && m != 0)
-		printf("last digit of %d is %d is less than 6 and not 0\n", n, m);
+	if (last_digit > 5)
+	{
+		printf("grater than 5\n");
+	}
+	else if (last_digit  == 0)
+	{
+		printf("0\n");
+	}
+	else if (last_digit < 6 && last_digit != 0)
+	{
+		printf("less than 6 and not 0\n");
+	}
 	return (0);
 }
