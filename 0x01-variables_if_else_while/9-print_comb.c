@@ -1,21 +1,27 @@
 #include <stdio.h>
+
 /**
- * main - Patience, persistence and perspiration
+ * main - Print single digit numbers in the formart
  *
- * Return: Always 0 (success)
+ * Description: Sepaeated by commas
+ *
+ * Return: Always(0) Success
+ *
  */
 
 int main(void)
-	{
-	int a;
+{
+	int i;
 
-	for (a = 0);
-	{		if (a < 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+	for (i = 48; i < 58; i++)
+	{
+		putchar(i);
+	}
+	if (i != 57)
+	{
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
-	}
+}
