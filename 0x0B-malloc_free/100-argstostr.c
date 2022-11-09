@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 /**
  * argstostr - concatenates all the arguments
  * @ac: input params
@@ -11,19 +10,13 @@
  * @av: input params
  *
  * Return: nothing.
- *
  */
 
 char *argstostr(int ac, char **av)
 {
 	int x, j, v = 0;
-
 	int len = 1;
-
 	char *str;
-
-
-
 
 	if (ac == 0 || av == NULL)
 	{
