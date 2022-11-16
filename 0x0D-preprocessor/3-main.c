@@ -3,7 +3,7 @@
 #include "3-function_like_macro.h"
 
 /**
- * main - check code 
+ * main - check code
  *
  * Return: Always 0.
  *
