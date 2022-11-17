@@ -61,7 +61,6 @@ void print_float(va_list arg)
 
 
 /**
- *
  * print_string - Prints a string.
  *
  * @arg: A list of arguments pointing to
@@ -91,7 +90,6 @@ void print_string(va_list arg)
  *
  * @...: A variable number of arguments to be printed.
  *
- * Description: Any argument not of type char, int, float,
  *
  *              or char * is ignored.
  *
@@ -118,8 +116,9 @@ void print_all(const char * const format, ...)
 		j = 0;
 
 		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-														j++;
-												if (j < 4)
+		j++;
+
+		if (j < 4)
 		{
 			printf("%s", separator);
 			funcs[j].print(args);
