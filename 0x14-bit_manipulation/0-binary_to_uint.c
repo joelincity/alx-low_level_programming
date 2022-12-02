@@ -1,13 +1,83 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
-  binary_to_uint - Converts a binary number to an unsigned int.
+ * _strlen - gets the lenght of input strings
  *
- * @b: A pointer to a string of 0 and 1 chars.
+ * @str: input string
  *
- * Return: If b is NULL or contains chars not 0 or 1 - 0.
+ * Return: len of the string
  *
- *         Otherwise - the converted number.
+ */
+
+
+
+int _strlen(const char *str)
+
+{
+
+		int len = 0;
+
+
+
+			while (*str)
+
+					{
+
+								len++;
+
+										str++;
+
+											}
+
+				return (len);
+
+}
+
+
+
+/**
+ * _to_power - prints the power of numbers
+ *
+ * @base: base parameter
+ *
+ * @power: power parameter
+ *
+ * Return: product of two numbers
+ *
+ */
+
+
+int _to_power(const int base, int power)
+
+{
+
+		int product = 1;
+
+
+
+			while (power > 1)
+
+					{
+
+								product *= base;
+
+										power++;
+
+											}
+
+				return (product);
+
+}
+
+
+
+/**
+ * binary_to_uint - converts a binary number to an unsigned int
+ *
+ * @b: input value
+ *
+ * Return: converted number, or 0 if b is NULL
  *
  */
 
@@ -15,41 +85,47 @@ unsigned int binary_to_uint(const char *b)
 
 {
 
-		unsigned int num = 0, mult = 1;
-
-			int len;
+		int power, num;
 
 
 
-				if (b == '\0')
+			power = _strlen(b) - 1;
 
-							return (0);
+				num = 0;
 
+					if (!b)
 
+							{
 
-					for (len = 0; b[len];)
+										return (0);
 
-								len++;
+											}
 
-
-
-						for (len -= 1; len >= 0; len--)
+						while (*b)
 
 								{
 
-											if (b[len] != '0' && b[len] != '1')
+											if (!(*b == '0' || *b == '1'))
 
-															return (0);
+														{
 
+																		return (0);
 
+																				}
 
-													num += (b[len] - '0') * mult;
+													if (*b == '1')
 
-															mult *= 2;
+																{
 
-																}
+																				num += _to_power(2, power);
 
+																						}
 
+															b++;
+
+																	power--;
+
+																		}
 
 							return (num);
 
